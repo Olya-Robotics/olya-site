@@ -120,6 +120,16 @@
         if (msg) msg.hidden = true;
         if (submit) submit.disabled = true;
 
+        var emailIsAuthorized = email && email.value.trim().toLowerCase() === "contato@olya.cc";
+        if (!emailIsAuthorized) {
+          if (msg) {
+            msg.textContent = t("login.invalid");
+            msg.hidden = false;
+          }
+          if (submit) submit.disabled = false;
+          return;
+        }
+
         try {
           var response = await fetch("/api/login", {
             method: "POST",
@@ -131,9 +141,18 @@
             })
           });
 
-          if (!response.ok) {
+          var result = null;
+          try { result = await response.json(); } catch (parseError) {}
+          if (response.status === 401) {
             if (msg) {
-              msg.textContent = response.status === 401 ? t("login.invalid") : t("login.unavailable");
+              msg.textContent = t("login.invalid");
+              msg.hidden = false;
+            }
+            return;
+          }
+          if (!response.ok || !result || result.ok !== true) {
+            if (msg) {
+              msg.textContent = t("login.unavailable");
               msg.hidden = false;
             }
             return;
