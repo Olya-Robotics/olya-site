@@ -1,6 +1,6 @@
 # olya.cc — site estático
 
-Site institucional da **OLYA TECNOLOGIA LTDA**, reconstruído como HTML/CSS/JS
+Site institucional da **OLYA**, reconstruído como HTML/CSS/JS
 puro. **Não tem build**: é só subir a pasta.
 
 ## Como publicar
@@ -38,7 +38,7 @@ O repositório `olya-site-main` é um projeto Vite + React. Duas opções:
 | `aplicacoes.html` | Aplicações educacionais (contextos, metodologias, STEAM) |
 | `documentacao.html` | Documentação institucional (com modal de área restrita) |
 | `suporte.html` | Suporte e pós-venda |
-| `contato.html` | Contato + dados institucionais + formulário |
+| `contato.html` | Contato + formulário |
 | `login.html` | Entrar |
 | `esqueci-senha.html` | Recuperação de senha |
 | `redefinir-senha.html` | Criar nova senha (com medidor de força) |
@@ -58,9 +58,23 @@ O repositório `olya-site-main` é um projeto Vite + React. Duas opções:
   **Nada é enviado**: não há back-end. Para ligar de verdade, aponte o
   `action` do `<form>` para o seu serviço (Formspree, Netlify Forms, API
   própria) e remova o atributo `data-demo`.
-- **Login** — as telas navegam entre si (`login` → `area-cliente`), mas não há
-  autenticação. É maquete.
+- **Login** — usa Vercel Functions, cookie `HttpOnly` assinado e middleware para proteger
+  `area-cliente.html`. Os dados exibidos na área ainda são demonstrativos.
 
+## Autenticação da área do cliente
+
+A autenticação roda em Vercel Functions (`api/`) e usa um cookie de sessão `HttpOnly`,
+`Secure` e assinado. A área do cliente é protegida pelo `middleware.js`.
+
+Configure estas variáveis no projeto da Vercel, em **Settings → Environment Variables**,
+para Production e Preview quando necessário:
+
+- `AUTH_EMAIL` — e-mail autorizado;
+- `AUTH_PASSWORD` — senha autorizada, mantida apenas na Vercel;
+- `AUTH_SESSION_SECRET` — segredo aleatório com pelo menos 32 caracteres.
+
+Depois de criar ou alterar variáveis de ambiente, faça um novo deploy. Os valores não
+devem ser colocados no HTML, JavaScript ou Git.
 ## Estrutura
 
 ```

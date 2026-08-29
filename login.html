@@ -41,7 +41,7 @@
 </div>
 <h1 style="font-size:2rem" data-i18n="login.h1">Entrar</h1>
 <p class="muted" data-i18n="login.lead">Acesse a área do cliente com o e-mail cadastrado pela sua instituição.</p>
-<form data-demo data-demo-go="area-cliente.html" style="margin-top:var(--space-6)">
+<form data-auth-form data-auth-go="area-cliente.html" style="margin-top:var(--space-6)">
 <div class="field">
 <label for="l-mail" data-i18n="login.email">E-mail</label>
 <span class="input-wrap">
@@ -61,6 +61,7 @@
 <label class="check" style="margin:0"><input type="checkbox" checked><span data-i18n="login.remember">Manter-me conectado neste dispositivo</span></label>
 </div>
 <button class="btn btn--primary btn--lg btn--block" type="submit"><span data-i18n="login.submit">Entrar</span><i data-lucide="arrow-right"></i></button>
+<div class="form-msg form-msg--error" data-auth-error role="alert" hidden>Usuário ou senha inválidos.</div>
 </form>
 <p class="auth__foot"><a href="esqueci-senha.html" data-i18n="login.forgot">Esqueci minha senha</a></p>
 <hr class="rule" style="margin:var(--space-5) 0">
@@ -68,7 +69,7 @@
 <span data-i18n="login.noaccount">Não tem acesso?</span> <a href="solicitar-acesso.html" data-i18n="login.request">Solicitar acesso institucional</a>
 </p>
 <p class="auth__legal">
-<a href="index.html" data-i18n="auth.back">Voltar ao site</a> · <span data-i18n="auth.demo">Telas de demonstração — a autenticação ainda não está conectada.</span>
+<a href="index.html" data-i18n="auth.back">Voltar ao site</a> · <span data-i18n="auth.demo">A autenticação é protegida pela Vercel.</span>
 </p>
 </div>
 </main>

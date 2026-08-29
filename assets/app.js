@@ -105,6 +105,84 @@
     });
   }
 
+  /* ---------------- autenticação ---------------- */
+  function initAuthForm() {
+    var forms = document.querySelectorAll("[data-auth-form]");
+    for (var i = 0; i < forms.length; i++) {
+      forms[i].addEventListener("submit", async function (ev) {
+        ev.preventDefault();
+        var form = ev.currentTarget;
+        var email = form.querySelector('input[type="email"]');
+        var password = form.querySelector('input[type="password"]');
+        var msg = form.querySelector("[data-auth-error]");
+        var submit = form.querySelector('[type="submit"]');
+
+        if (msg) msg.hidden = true;
+        if (submit) submit.disabled = true;
+
+        try {
+          var response = await fetch("/api/login", {
+            method: "POST",
+            credentials: "same-origin",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              email: email ? email.value : "",
+              password: password ? password.value : ""
+            })
+          });
+
+          if (!response.ok) {
+            if (msg) {
+              msg.textContent = response.status === 401 ? t("login.invalid") : t("login.unavailable");
+              msg.hidden = false;
+            }
+            return;
+          }
+
+          window.location.href = form.getAttribute("data-auth-go") || "area-cliente.html";
+        } catch (error) {
+          if (msg) {
+            msg.textContent = t("login.unavailable");
+            msg.hidden = false;
+          }
+        } finally {
+          if (submit) submit.disabled = false;
+        }
+      });
+    }
+  }
+
+  function initProtectedArea() {
+    var content = document.querySelector("[data-auth-required]");
+    if (!content) return;
+
+    fetch("/api/session", { credentials: "same-origin", cache: "no-store" })
+      .then(function (response) {
+        if (!response.ok) {
+          window.location.replace("login.html?redirect=area-cliente.html");
+          return;
+        }
+        content.removeAttribute("hidden");
+      })
+      .catch(function () {
+        window.location.replace("login.html?redirect=area-cliente.html");
+      });
+  }
+
+  function initLogout() {
+    var links = document.querySelectorAll("[data-logout]");
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener("click", function (ev) {
+        ev.preventDefault();
+        var link = ev.currentTarget;
+        fetch("/api/logout", { method: "POST", credentials: "same-origin", cache: "no-store" })
+          .catch(function () {})
+          .then(function () {
+            window.location.href = link.getAttribute("href") || "login.html";
+          });
+      });
+    }
+  }
   /* ---------------- formulários de demonstração ---------------- */
   function initDemoForms() {
     var forms = document.querySelectorAll("form[data-demo]");
@@ -232,6 +310,9 @@
     applyLang(initialLang());
     markCurrent();
     initMenu();
+    initAuthForm();
+    initProtectedArea();
+    initLogout();
     initDemoForms();
     initReveal();
     initStrength();

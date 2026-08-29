@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-<div class="app">
+<div class="app" data-auth-required hidden>
 <aside class="sidebar">
 <a class="brand" href="index.html"><img src="assets/img/olya-logo.svg" alt="oLyA" data-i18n-alt="brand.alt"></a>
 <nav>
@@ -24,7 +24,7 @@
 </nav>
 <div class="sidebar__foot">
 <div class="pixelbar pixelbar--4"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-<a class="btn btn--secondary btn--sm btn--block" href="login.html" style="margin-top:var(--space-4)"><i data-lucide="log-out"></i><span data-i18n="area.logout">Sair</span></a>
+<a class="btn btn--secondary btn--sm btn--block" data-logout href="login.html" style="margin-top:var(--space-4)"><i data-lucide="log-out"></i><span data-i18n="area.logout">Sair</span></a>
 </div>
 </aside>
 
