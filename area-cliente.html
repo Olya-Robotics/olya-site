@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title data-i18n="area.title">Área do cliente — oLyA</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+<a class="brand" href="index.html"><img src="assets/img/olya-logo.svg" alt="oLyA" data-i18n-alt="brand.alt"></a>
+<nav>
+<a href="area-cliente.html" aria-current="page"><i data-lucide="layout-dashboard"></i><span data-i18n="area.nav.overview">Visão geral</span></a>
+<a href="area-cliente.html"><i data-lucide="file-text"></i><span data-i18n="area.nav.docs">Documentos</span></a>
+<a href="area-cliente.html"><i data-lucide="book-open"></i><span data-i18n="area.nav.materials">Materiais pedagógicos</span></a>
+<a href="area-cliente.html"><i data-lucide="package"></i><span data-i18n="area.nav.orders">Pedidos</span></a>
+<a href="area-cliente.html"><i data-lucide="headphones"></i><span data-i18n="area.nav.support">Suporte</span></a>
+<a href="area-cliente.html"><i data-lucide="user"></i><span data-i18n="area.nav.account">Minha conta</span></a>
+</nav>
+<div class="sidebar__foot">
+<div class="pixelbar pixelbar--4"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<a class="btn btn--secondary btn--sm btn--block" href="login.html" style="margin-top:var(--space-4)"><i data-lucide="log-out"></i><span data-i18n="area.logout">Sair</span></a>
+</div>
+</aside>
+
+<div>
+<div class="appbar">
+<div>
+<div class="ui small muted" data-i18n="area.hello">Olá, Coordenação</div>
+<div class="ui" style="font-weight:500" data-i18n="area.institution">EMEF Pequeno Príncipe</div>
+</div>
+<div class="header-tools">
+<div class="langswitch" role="group" aria-label="Idioma / Language">
+<button type="button" data-lang="pt" aria-pressed="true">PT</button>
+<button type="button" data-lang="en" aria-pressed="false">EN</button>
+</div>
+<button type="button" class="iconbtn" data-theme-toggle aria-pressed="false" data-i18n-aria="nav.theme" aria-label="Alternar tema"><i data-lucide="moon"></i></button>
+<span class="avatar">CP</span>
+</div>
+</div>
+
+<main class="appmain">
+<h1 style="font-size:1.75rem" data-i18n="area.h1">Área do cliente</h1>
+<p class="muted" data-i18n="area.lead">Documentação, materiais pedagógicos e pedidos da sua instituição.</p>
+
+<div class="note" style="margin-bottom:var(--space-6)"><i data-lucide="info"></i><span data-i18n="area.demo">Painel de demonstração — os dados são fictícios e nada está conectado.</span></div>
+
+<div class="grid g4" style="margin-bottom:var(--space-7)">
+<div class="card">
+<div class="stat__value" style="font-size:2rem">17</div>
+<div class="stat__label" data-i18n="area.k1">Documentos disponíveis</div>
+</div>
+<div class="card">
+<div class="stat__value" style="font-size:2rem">6</div>
+<div class="stat__label" data-i18n="area.k2">Kits em operação</div>
+</div>
+<div class="card">
+<div class="stat__value" style="font-size:2rem">2</div>
+<div class="stat__label" data-i18n="area.k3">Pedidos em andamento</div>
+</div>
+<div class="card">
+<div class="stat__value" style="font-size:2rem">120<small>h</small></div>
+<div class="stat__label" data-i18n="area.k4">Horas de formação</div>
+</div>
+</div>
+
+<div class="grid g2-lg" style="gap:var(--space-6);align-items:start">
+<div class="docgroup">
+<div class="docgroup__head">
+<span class="itile"><i data-lucide="file-text"></i></span>
+<h3 data-i18n="area.recent">Documentos recentes</h3>
+</div>
+<div class="docrow">
+<i data-lucide="file-text"></i>
+<div>
+<div class="docrow__name" data-i18n="docs.d1">Catálogo geral OLYA 2026</div>
+<div class="docrow__meta">PDF · 2,4 MB</div>
+</div>
+<div class="docrow__spacer"></div>
+<button type="button" class="btn btn--ghost btn--sm"><i data-lucide="download"></i><span data-i18n="docs.download">Baixar</span></button>
+</div>
+<div class="docrow">
+<i data-lucide="file-text"></i>
+<div>
+<div class="docrow__name" data-i18n="docs.d4">Braço robótico educacional — especificações</div>
+<div class="docrow__meta">PDF · 890 KB</div>
+</div>
+<div class="docrow__spacer"></div>
+<button type="button" class="btn btn--ghost btn--sm"><i data-lucide="download"></i><span data-i18n="docs.download">Baixar</span></button>
+</div>
+<div class="docrow">
+<i data-lucide="file-text"></i>
+<div>
+<div class="docrow__name" data-i18n="docs.d10">Guia pedagógico para educadores</div>
+<div class="docrow__meta">PDF · 2,8 MB</div>
+</div>
+<div class="docrow__spacer"></div>
+<button type="button" class="btn btn--ghost btn--sm"><i data-lucide="download"></i><span data-i18n="docs.download">Baixar</span></button>
+</div>
+<div class="docrow">
+<i data-lucide="file-text"></i>
+<div>
+<div class="docrow__name" data-i18n="docs.d14">Termo de garantia padrão</div>
+<div class="docrow__meta">PDF · 150 KB</div>
+</div>
+<div class="docrow__spacer"></div>
+<button type="button" class="btn btn--ghost btn--sm"><i data-lucide="download"></i><span data-i18n="docs.download">Baixar</span></button>
+</div>
+</div>
+
+<div class="card">
+<div class="rowsplit" style="margin-bottom:var(--space-4)">
+<h3 style="font-size:1.0625rem;margin:0" data-i18n="area.orders">Pedidos</h3>
+<a class="btn btn--ghost btn--sm" href="area-cliente.html"><span data-i18n="area.viewall">Ver todos</span><i data-lucide="arrow-right"></i></a>
+</div>
+<table class="table">
+<thead>
+<tr>
+<th data-i18n="area.order">Pedido</th>
+<th data-i18n="area.date">Data</th>
+<th data-i18n="area.items">Itens</th>
+<th data-i18n="area.status">Situação</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="mono">#2026-014</td><td class="mono">12/02/2026</td><td class="num">5</td><td><span class="badge badge--amber" data-i18n="area.st1">Em separação</span></td></tr>
+<tr><td class="mono">#2025-231</td><td class="mono">08/11/2025</td><td class="num">12</td><td><span class="badge badge--green" data-i18n="area.st2">Entregue</span></td></tr>
+<tr><td class="mono">#2026-021</td><td class="mono">20/02/2026</td><td class="num">3</td><td><span class="badge" data-i18n="area.st3">Em análise</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+</div>
+</div>
+<script src="https://unpkg.com/lucide@0.544.0/dist/umd/lucide.min.js"></script>
+<script src="assets/i18n.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title data-i18n="login.title">Entrar — oLyA</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="auth">
+<aside class="auth__aside">
+<div class="pixelbar pixelbar--6"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div>
+<a class="brand" href="index.html" style="margin-bottom:var(--space-8)"><img src="assets/img/olya-logo.svg" alt="oLyA" data-i18n-alt="brand.alt"></a>
+<h2 data-i18n="auth.aside.h2">Área do cliente oLyA</h2>
+<p class="lead" style="color:rgba(255,255,255,.72)" data-i18n="auth.aside.p">Acesse fichas técnicas, manuais, planos de aula e o histórico dos seus pedidos institucionais.</p>
+<ul class="blist blist--ui" style="margin-top:var(--space-6)">
+<li style="color:rgba(255,255,255,.85)" data-i18n="auth.aside.i1">Documentação técnica completa</li>
+<li style="color:rgba(255,255,255,.85)" data-i18n="auth.aside.i2">Materiais pedagógicos por ano escolar</li>
+<li style="color:rgba(255,255,255,.85)" data-i18n="auth.aside.i3">Acompanhamento de pedidos e garantias</li>
+</ul>
+</div>
+<p class="small" style="color:rgba(255,255,255,.55);margin:0" data-i18n="tagline">Apreender o presente, potencializar o futuro.</p>
+<img class="auth__aside-col" src="assets/img/robot-column.png" alt="">
+</aside>
+<main class="auth__main">
+<div class="auth__card">
+<div class="auth__top">
+<a class="brand" href="index.html"><img src="assets/img/olya-logo.svg" alt="oLyA" data-i18n-alt="brand.alt"></a>
+<div class="header-tools" style="margin:0">
+<div class="langswitch" role="group" aria-label="Idioma / Language">
+<button type="button" data-lang="pt" aria-pressed="true">PT</button>
+<button type="button" data-lang="en" aria-pressed="false">EN</button>
+</div>
+<button type="button" class="iconbtn" data-theme-toggle aria-pressed="false" data-i18n-aria="nav.theme" aria-label="Alternar tema"><i data-lucide="moon"></i></button>
+</div>
+</div>
+<h1 style="font-size:2rem" data-i18n="login.h1">Entrar</h1>
+<p class="muted" data-i18n="login.lead">Acesse a área do cliente com o e-mail cadastrado pela sua instituição.</p>
+<form data-demo data-demo-go="area-cliente.html" style="margin-top:var(--space-6)">
+<div class="field">
+<label for="l-mail" data-i18n="login.email">E-mail</label>
+<span class="input-wrap">
+<i data-lucide="mail"></i>
+<input class="input" id="l-mail" type="email" required autocomplete="username" placeholder="nome@escola.edu.br">
+</span>
+</div>
+<div class="field">
+<label for="l-pass" data-i18n="login.password">Senha</label>
+<span class="input-wrap">
+<i data-lucide="lock"></i>
+<input class="input" id="l-pass" type="password" required autocomplete="current-password" placeholder="••••••••">
+<button type="button" class="revealbtn" data-reveal="l-pass" data-i18n-aria="login.show" aria-label="Mostrar senha"><i data-lucide="eye"></i></button>
+</span>
+</div>
+<div class="rowsplit" style="margin-bottom:var(--space-5)">
+<label class="check" style="margin:0"><input type="checkbox" checked><span data-i18n="login.remember">Manter-me conectado neste dispositivo</span></label>
+</div>
+<button class="btn btn--primary btn--lg btn--block" type="submit"><span data-i18n="login.submit">Entrar</span><i data-lucide="arrow-right"></i></button>
+</form>
+<p class="auth__foot"><a href="esqueci-senha.html" data-i18n="login.forgot">Esqueci minha senha</a></p>
+<hr class="rule" style="margin:var(--space-5) 0">
+<p class="auth__foot" style="margin:0">
+<span data-i18n="login.noaccount">Não tem acesso?</span> <a href="solicitar-acesso.html" data-i18n="login.request">Solicitar acesso institucional</a>
+</p>
+<p class="auth__legal">
+<a href="index.html" data-i18n="auth.back">Voltar ao site</a> · <span data-i18n="auth.demo">Telas de demonstração — a autenticação ainda não está conectada.</span>
+</p>
+</div>
+</main>
+</div>
+<script src="https://unpkg.com/lucide@0.544.0/dist/umd/lucide.min.js"></script>
+<script src="assets/i18n.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

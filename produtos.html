@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title data-i18n="prod.title">Produtos — oLyA</title>
+<meta name="description" content="A OLYA desenvolve e fornece equipamentos e kits de robótica educacional para instituições de ensino.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="brand" href="index.html"><img src="assets/img/olya-logo.svg" alt="oLyA" data-i18n-alt="brand.alt"></a>
+<nav class="nav">
+<a href="index.html" data-i18n="nav.home">Início</a>
+<a href="quem-somos.html" data-i18n="nav.about">Quem Somos</a>
+<a href="produtos.html" aria-current="page" data-i18n="nav.products">Produtos</a>
+<a href="aplicacoes.html" data-i18n="nav.applications">Aplicações</a>
+<a href="documentacao.html" data-i18n="nav.docs">Documentação</a>
+<a href="suporte.html" data-i18n="nav.support">Suporte</a>
+<a href="contato.html" data-i18n="nav.contact">Contato</a>
+</nav>
+<div class="header-tools">
+<div class="langswitch" role="group" aria-label="Idioma / Language">
+<button type="button" data-lang="pt" aria-pressed="true">PT</button>
+<button type="button" data-lang="en" aria-pressed="false">EN</button>
+</div>
+<button type="button" class="iconbtn" data-theme-toggle aria-pressed="false" data-i18n-aria="nav.theme" aria-label="Alternar tema claro e escuro"><i data-lucide="moon"></i></button>
+<a class="btn btn--primary btn--sm" href="login.html" data-i18n="nav.login">Entrar</a>
+<button type="button" class="iconbtn menubtn" data-menu-toggle aria-expanded="false" aria-controls="mobile-nav" data-i18n-aria="nav.menu" aria-label="Menu"><i data-lucide="menu"></i></button>
+</div>
+</div>
+<div class="pixelbar pixelbar--4"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="mobile-nav" id="mobile-nav" hidden>
+<a href="index.html" data-i18n="nav.home">Início</a>
+<a href="quem-somos.html" data-i18n="nav.about">Quem Somos</a>
+<a href="produtos.html" aria-current="page" data-i18n="nav.products">Produtos</a>
+<a href="aplicacoes.html" data-i18n="nav.applications">Aplicações</a>
+<a href="documentacao.html" data-i18n="nav.docs">Documentação</a>
+<a href="suporte.html" data-i18n="nav.support">Suporte</a>
+<a href="contato.html" data-i18n="nav.contact">Contato</a>
+<a href="login.html" data-i18n="nav.login">Entrar</a>
+</div>
+</header>
+<main>
+<section class="page-head">
+<div class="container">
+<p class="page-head__crumb" data-i18n="prod.crumb">Produtos</p>
+<h1 data-i18n="prod.h1">Portfólio de produtos</h1>
+<p class="lead measure" data-i18n="prod.lead">Equipamentos e kits de robótica educacional desenvolvidos para atender às necessidades de instituições de ensino.</p>
+</div>
+<img class="page-head__col" src="assets/img/robot-column.png" alt="">
+</section>
+
+<section class="section" id="braco-robotico" style="scroll-margin-top:80px">
+<div class="container">
+<div class="grid g2-lg" style="gap:var(--space-8);align-items:start">
+<div>
+<div class="chip" style="margin-bottom:var(--space-4)"><i data-lucide="cog"></i><span data-i18n="prod.p1badge">Produto 1</span></div>
+<h2 data-i18n="prod.arm.h2">Braço robótico educacional</h2>
+<p class="lead" data-i18n="prod.arm.p1">Equipamento projetado especificamente para ambientes educacionais, o braço robótico educacional OLYA permite o aprendizado prático de conceitos fundamentais de automação, programação e mecatrônica.</p>
+<p class="muted" data-i18n="prod.arm.p2">Desenvolvido com foco na segurança e durabilidade para uso em salas de aula e laboratórios, o equipamento oferece uma experiência de aprendizado que aproxima os estudantes da realidade da indústria 4.0.</p>
+<h3 style="margin-top:var(--space-6)" data-i18n="prod.arm.features">Principais características</h3>
+<ul class="flist">
+<li><span class="itile itile--sm"><i data-lucide="cog"></i></span><span class="ui small" data-i18n="prod.arm.f1">Múltiplos graus de liberdade para movimentos precisos</span></li>
+<li><span class="itile itile--sm"><i data-lucide="settings"></i></span><span class="ui small" data-i18n="prod.arm.f2">Interface de programação intuitiva e acessível</span></li>
+<li><span class="itile itile--sm"><i data-lucide="zap"></i></span><span class="ui small" data-i18n="prod.arm.f3">Compatível com diferentes níveis de ensino</span></li>
+<li><span class="itile itile--sm"><i data-lucide="users"></i></span><span class="ui small" data-i18n="prod.arm.f4">Estrutura robusta para uso em ambiente escolar</span></li>
+</ul>
+</div>
+<div class="stack" style="gap:var(--space-5)">
+<figure class="card card--pad0" style="margin:0"><div class="card__media" style="aspect-ratio:3/4"><img src="assets/img/braco-robotico.jpg" alt="" loading="lazy"></div></figure>
+<div class="card">
+<h3 style="font-size:1.0625rem"><span data-i18n="prod.arm.audience">Público atendido</span></h3>
+<ul class="blist blist--ui" style="margin:0">
+<li data-i18n="prod.arm.a1">Ensino fundamental (anos finais)</li>
+<li data-i18n="prod.arm.a2">Ensino médio</li>
+<li data-i18n="prod.arm.a3">Ensino técnico e profissionalizante</li>
+<li data-i18n="prod.arm.a4">Cursos de graduação em engenharia</li>
+</ul>
+</div>
+<div class="card">
+<h3 style="font-size:1.0625rem" data-i18n="prod.arm.uses">Aplicações educacionais</h3>
+<ul class="blist blist--ui" style="margin:0">
+<li data-i18n="prod.arm.u1">Ensino de conceitos de automação e robótica</li>
+<li data-i18n="prod.arm.u2">Introdução à programação e lógica computacional</li>
+<li data-i18n="prod.arm.u3">Projetos interdisciplinares STEAM</li>
+<li data-i18n="prod.arm.u4">Simulação de processos industriais</li>
+<li data-i18n="prod.arm.u5">Competições e feiras de ciências</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section section--muted" id="kits" style="scroll-margin-top:80px">
+<div class="container">
+<div class="measure" style="margin-bottom:var(--space-7)">
+<div class="chip" style="margin-bottom:var(--space-4)"><i data-lucide="package"></i><span data-i18n="prod.p2badge">Produto 2</span></div>
+<h2 data-i18n="prod.kits.h2">Kits de robótica educacional</h2>
+<p class="lead" data-i18n="prod.kits.lead">Conjuntos completos para implementação de laboratórios e atividades de robótica, desenvolvidos para diferentes níveis de ensino e objetivos pedagógicos.</p>
+</div>
+<figure class="card card--pad0" style="margin:0 0 var(--space-6)"><div class="card__media" style="aspect-ratio:16/7"><img src="assets/img/kit.jpg" alt="" loading="lazy"></div></figure>
+<div class="grid g3" style="margin-bottom:var(--space-6)">
+<div class="card card--hover">
+<span class="itile"><i data-lucide="puzzle"></i></span>
+<h3 style="font-size:1.0625rem" data-i18n="prod.k1.title">Kit iniciação</h3>
+<p class="small muted" data-i18n="prod.k1.desc">Ideal para primeiros contatos com robótica, voltado para estudantes do ensino fundamental.</p>
+<ul class="blist blist--ui" style="margin:0">
+<li data-i18n="prod.k1.f1">Componentes básicos de eletrônica</li>
+<li data-i18n="prod.k1.f2">Montagens simplificadas</li>
+<li data-i18n="prod.k1.f3">Guia ilustrado para professores</li>
+</ul>
+</div>
+<div class="card card--hover">
+<span class="itile"><i data-lucide="layers"></i></span>
+<h3 style="font-size:1.0625rem" data-i18n="prod.k2.title">Kit intermediário</h3>
+<p class="small muted" data-i18n="prod.k2.desc">Para aprofundamento em conceitos de programação e mecânica, adequado ao ensino fundamental II e médio.</p>
+<ul class="blist blist--ui" style="margin:0">
+<li data-i18n="prod.k2.f1">Sensores e atuadores diversos</li>
+<li data-i18n="prod.k2.f2">Microcontrolador programável</li>
+<li data-i18n="prod.k2.f3">Projetos estruturados</li>
+</ul>
+</div>
+<div class="card card--hover">
+<span class="itile"><i data-lucide="trophy"></i></span>
+<h3 style="font-size:1.0625rem" data-i18n="prod.k3.title">Kit avançado / competição</h3>
+<p class="small muted" data-i18n="prod.k3.desc">Recursos completos para projetos complexos e participação em competições de robótica.</p>
+<ul class="blist blist--ui" style="margin:0">
+<li data-i18n="prod.k3.f1">Componentes de alta performance</li>
+<li data-i18n="prod.k3.f2">Materiais para construção livre</li>
+<li data-i18n="prod.k3.f3">Suporte para competições</li>
+</ul>
+</div>
+</div>
+<div class="grid g2" style="gap:var(--space-5)">
+<div class="card">
+<h3 style="font-size:1.0625rem" data-i18n="prod.ped.title">Aplicações pedagógicas</h3>
+<ul class="blist blist--ui" style="margin:0">
+<li data-i18n="prod.ped.i1">Desenvolvimento do pensamento computacional</li>
+<li data-i18n="prod.ped.i2">Integração de conceitos de matemática, física e tecnologia</li>
+<li data-i18n="prod.ped.i3">Trabalho colaborativo e resolução de problemas</li>
+<li data-i18n="prod.ped.i4">Projetos interdisciplinares e feiras de ciências</li>
+</ul>
+</div>
+<div class="card">
+<h3 style="font-size:1.0625rem" data-i18n="prod.steam.title">Compatibilidade STEAM</h3>
+<p class="small muted" data-i18n="prod.steam.p1">Todos os kits são desenvolvidos seguindo a metodologia STEAM (Science, Technology, Engineering, Arts, Mathematics), promovendo a integração de diferentes áreas do conhecimento.</p>
+<p class="small muted" style="margin:0" data-i18n="prod.steam.p2">Os materiais pedagógicos incluem orientações para conexão com componentes curriculares e sugestões de projetos interdisciplinares.</p>
+</div>
+</div>
+<div class="note" style="margin-top:var(--space-6)"><i data-lucide="info"></i><span data-i18n="prod.pricenote">Preços sob consulta. Enviamos proposta formal no padrão do seu edital.</span></div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="card rowsplit">
+<div>
+<h3 style="font-size:1.0625rem;margin-bottom:var(--space-1)" data-i18n="prod.docs.title">Documentação técnica completa</h3>
+<p class="small muted" style="margin:0" data-i18n="prod.docs.desc">Acesse fichas técnicas, catálogos e especificações detalhadas dos produtos.</p>
+</div>
+<a class="btn btn--primary btn--lg" href="documentacao.html" data-i18n="prod.docs.cta">Acessar documentação</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="pixelbar pixelbar--6"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="container">
+<div class="site-footer__grid">
+<div>
+<a class="brand site-footer__brand" href="index.html"><img src="assets/img/olya-logo.svg" alt="oLyA" data-i18n-alt="brand.alt"></a>
+<p class="small" style="color:rgba(255,255,255,.72);max-width:30ch;margin:var(--space-4) 0 0" data-i18n="footer.blurb">Soluções em robótica educacional para formação tecnológica e inovação no ensino brasileiro.</p>
+<div class="site-footer__contact">
+<div><i data-lucide="mail"></i><a href="mailto:contato@olya.cc">contato@olya.cc</a></div>
+<div><i data-lucide="map-pin"></i><span data-i18n="footer.location">Florianópolis, SC — Brasil</span></div>
+</div>
+<div class="social">
+<a href="https://instagram.com/olya" aria-label="Instagram"><img src="assets/img/social/instagram.svg" alt="Instagram"></a>
+<a href="https://youtube.com/@olya" aria-label="YouTube"><img src="assets/img/social/youtube.svg" alt="YouTube"></a>
+<a href="https://facebook.com/olya" aria-label="Facebook"><img src="assets/img/social/facebook.svg" alt="Facebook"></a>
+</div>
+</div>
+<div>
+<h3 data-i18n="footer.institutional">Institucional</h3>
+<div class="site-footer__links">
+<a href="quem-somos.html" data-i18n="footer.about">Quem Somos</a>
+<a href="quem-somos.html#missao" data-i18n="footer.mission">Missão e Valores</a>
+<a href="contato.html" data-i18n="footer.contact">Contato</a>
+</div>
+</div>
+<div>
+<h3 data-i18n="footer.products">Produtos</h3>
+<div class="site-footer__links">
+<a href="produtos.html#braco-robotico" data-i18n="footer.arm">Braço Robótico</a>
+<a href="produtos.html#kits" data-i18n="footer.kits">Kits de Robótica</a>
+<a href="aplicacoes.html" data-i18n="footer.applications">Aplicações</a>
+</div>
+</div>
+<div>
+<h3 data-i18n="footer.support">Suporte</h3>
+<div class="site-footer__links">
+<a href="documentacao.html" data-i18n="footer.docs">Documentação</a>
+<a href="suporte.html" data-i18n="footer.techsupport">Suporte Técnico</a>
+<a href="suporte.html#materiais" data-i18n="footer.materials">Materiais de Apoio</a>
+<a href="area-cliente.html" data-i18n="footer.clientarea">Área do Cliente</a>
+</div>
+</div>
+</div>
+<div class="site-footer__bottom">
+<span data-i18n="footer.rights">© 2026 OLYA TECNOLOGIA LTDA. Todos os direitos reservados.</span>
+<span data-i18n="footer.cnpj">CNPJ 62.578.525/0001-66</span>
+</div>
+</div>
+</footer>
+<script src="https://unpkg.com/lucide@0.544.0/dist/umd/lucide.min.js"></script>
+<script src="assets/i18n.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

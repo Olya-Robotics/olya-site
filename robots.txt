@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /area-cliente.html
+Disallow: /login.html
+Disallow: /esqueci-senha.html
+Disallow: /redefinir-senha.html
+Disallow: /solicitar-acesso.html
+
+Sitemap: https://www.olya.cc/sitemap.xml

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title data-i18n="docs.title">Documentação — oLyA</title>
+<meta name="description" content="A OLYA desenvolve e fornece equipamentos e kits de robótica educacional para instituições de ensino.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="brand" href="index.html"><img src="assets/img/olya-logo.svg" alt="oLyA" data-i18n-alt="brand.alt"></a>
+<nav class="nav">
+<a href="index.html" data-i18n="nav.home">Início</a>
+<a href="quem-somos.html" data-i18n="nav.about">Quem Somos</a>
+<a href="produtos.html" data-i18n="nav.products">Produtos</a>
+<a href="aplicacoes.html" data-i18n="nav.applications">Aplicações</a>
+<a href="documentacao.html" aria-current="page" data-i18n="nav.docs">Documentação</a>
+<a href="suporte.html" data-i18n="nav.support">Suporte</a>
+<a href="contato.html" data-i18n="nav.contact">Contato</a>
+</nav>
+<div class="header-tools">
+<div class="langswitch" role="group" aria-label="Idioma / Language">
+<button type="button" data-lang="pt" aria-pressed="true">PT</button>
+<button type="button" data-lang="en" aria-pressed="false">EN</button>
+</div>
+<button type="button" class="iconbtn" data-theme-toggle aria-pressed="false" data-i18n-aria="nav.theme" aria-label="Alternar tema claro e escuro"><i data-lucide="moon"></i></button>
+<a class="btn btn--primary btn--sm" href="login.html" data-i18n="nav.login">Entrar</a>
+<button type="button" class="iconbtn menubtn" data-menu-toggle aria-expanded="false" aria-controls="mobile-nav" data-i18n-aria="nav.menu" aria-label="Menu"><i data-lucide="menu"></i></button>
+</div>
+</div>
+<div class="pixelbar pixelbar--4"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="mobile-nav" id="mobile-nav" hidden>
+<a href="index.html" data-i18n="nav.home">Início</a>
+<a href="quem-somos.html" data-i18n="nav.about">Quem Somos</a>
+<a href="produtos.html" data-i18n="nav.products">Produtos</a>
+<a href="aplicacoes.html" data-i18n="nav.applications">Aplicações</a>
+<a href="documentacao.html" aria-current="page" data-i18n="nav.docs">Documentação</a>
+<a href="suporte.html" data-i18n="nav.support">Suporte</a>
+<a href="contato.html" data-i18n="nav.contact">Contato</a>
+<a href="login.html" data-i18n="nav.login">Entrar</a>
+</div>
+</header>
+<main>
+<section class="page-head">
+<div class="container">
+<p class="page-head__crumb" data-i18n="docs.crumb">Documentação</p>
+<h1 data-i18n="docs.h1">Documentação institucional</h1>
+<p class="lead measure" data-i18n="docs.lead">Catálogos, fichas técnicas, manuais e documentos institucionais para processos licitatórios e avaliações técnicas.</p>
+</div>
+<img class="page-head__col" src="assets/img/robot-column.png" alt="">
+</section>
+
+<section class="section">
+<div class="container">
+<div class="measure" style="margin-bottom:var(--space-6)">
+<p class="lead" data-i18n="docs.intro">Esta seção reúne a documentação técnica e institucional da OLYA Robótica Educacional, organizada para facilitar o acesso durante processos de aquisição, licitações e avaliações técnicas.</p>
+<div class="note"><i data-lucide="info"></i><span><strong data-i18n="docs.notelabel">Nota:</strong> <span data-i18n="docs.note">Documentos marcados com (*) estão em processo de atualização. Para versões atualizadas ou documentos específicos, entre em contato pelo e-mail</span> <a href="mailto:contato@olya.cc">contato@olya.cc</a>.</span></div>
+</div>
+
+<div class="stack" style="gap:var(--space-5)">
+<div class="docgroup">
+<div class="docgroup__head">
+<span class="itile"><i data-lucide="book-open"></i></span>
+<h3 data-i18n="docs.g1">Catálogos institucionais</h3>
+</div>
+<div class="docrow">
+<i data-lucide="file-text"></i>
+<div>
+<div class="docrow__name" data-i18n="docs.d1">Catálogo geral OLYA 2026</div>
+<div class="docrow__meta">PDF · 2,4 MB</div>
+</div>
+<div class="docrow__spacer"></div>
+<button type="button" class="btn btn--ghost btn--sm" data-modal-open="doc-modal"><i data-lucide="download"></i><span data-i18n="docs.download">Baixar</span></button>
+</div>
+<div class="docrow">
+<i data-lucide="file-text"></i>
+<div>
+<div class="docrow__name" data-i18n="docs.d2">Apresentação institucional</div>
+<div class="docrow__meta">PDF · 1,8 MB</div>
+</div>
+<div class="docrow__spacer"></div>
+<button type="button" class="btn btn--ghost btn--sm" data-modal-open="doc-modal"><i data-lucide="download"></i><span data-i18n="docs.download">Baixar</span></button>
+</div>
+<div class="docrow">
+<i data-lucide="file-text"></i>
+<div>
+<div class="docrow__name" data-i18n="docs.d3">Portfólio de produtos</div>
+<div class="docrow__meta">PDF · 3,2 MB</div>
+</div>
+<div class="docrow__spacer"></div>
+<button type="button" class="btn btn--ghost btn--sm" data-modal-open="doc-modal"><i data-lucide="download"></i><span data-i18n="docs.download">Baixar</span></button>
+</div>
+</div>
+<div class="docgroup">
+<div class="docgroup__head">
+<span class="itile"><i data-lucide="clipboard-list"></i></span>
+<h3 data-i18n="docs.g2">Fichas técnicas</h3>
+</div>
+<div class="docrow">
+<i data-lucide="file-text"></i>
+<div>
+<div class="docrow__name" data-i18n="docs.d4">Braço robótico educacional — especificações</div>
+<div class="docrow__meta">PDF · 890 KB</div>
+</div>
+<div class="docrow__spacer"></div>
+<button type="button" class="btn btn--ghost btn--sm" data-modal-open="doc-modal"><i data-lucide="download"></i><span data-i18n="docs.download">Baixar</span></button>
+</div>
+<div class="docrow">
+<i data-lucide="file-text"></i>
+<div>
+<div class="docrow__name" data-i18n="docs.d5">Kit iniciação — ficha técnica</div>
+<div class="docrow__meta">PDF · 650 KB</div>
+</div>
+<div class="docrow__spacer"></div>
+<button type="button" class="btn btn--ghost btn--sm" data-modal-open="doc-modal"><i data-lucide="download"></i><span data-i18n="docs.download">Baixar</span></button>
+</div>
+<div class="docrow">
+<i data-lucide="file-text"></i>
+<div>
+<div class="docrow__name" data-i18n="docs.d6">Kit intermediário — ficha técnica</div>
+<div class="docrow__meta">PDF · 720 KB</div>
+</div>
+<div class="docrow__spacer"></div>
+<button type="button" class="btn btn--ghost btn--sm" data-modal-open="doc-modal"><i data-lucide="download"></i><span data-i18n="docs.download">Baixar</span></button>
+</div>
+<div class="docrow">
+<i data-lucide="file-text"></i>
+<div>
+<div class="docrow__name" data-i18n="docs.d7">Kit avançado — ficha técnica</div>
+<div class="docrow__meta">PDF · 780 KB</div>
+</div>
+<div class="docrow__spacer"></div>
+<button type="button" class="btn btn--ghost btn--sm" data-modal-open="doc-modal"><i data-lucide="download"></i><span data-i18n="docs.download">Baixar</span></button>
+</div>
+</div>
+<div class="docgroup">
+<div class="docgroup__head">
+<span class="itile"><i data-lucide="file-text"></i></span>
+<h3 data-i18n="docs.g3">Manuais e guias</h3>
+</div>
+<div class="docrow">
+<i data-lucide="file-text"></i>
+<div>
+<div class="docrow__name" data-i18n="docs.d8">Manual do braço robótico</div>
+<div class="docrow__meta">PDF · 4,5 MB</div>
+</div>
+<div class="docrow__spacer"></div>
+<button type="button" class="btn btn--ghost btn--sm" data-modal-open="doc-modal"><i data-lucide="download"></i><span data-i18n="docs.download">Baixar</span></button>
+</div>
+<div class="docrow">
+<i data-lucide="file-text"></i>
+<div>
+<div class="docrow__name" data-i18n="docs.d9">Guia de instalação e configuração</div>
+<div class="docrow__meta">PDF · 1,2 MB</div>
+</div>
+<div class="docrow__spacer"></div>
+<button type="button" class="btn btn--ghost btn--sm" data-modal-open="doc-modal"><i data-lucide="download"></i><span data-i18n="docs.download">Baixar</span></button>
+</div>
+<div class="docrow">
+<i data-lucide="file-text"></i>
+<div>
+<div class="docrow__name" data-i18n="docs.d10">Guia pedagógico para educadores</div>
+<div class="docrow__meta">PDF · 2,8 MB</div>
+</div>
+<div class="docrow__spacer"></div>
+<button type="button" class="btn btn--ghost btn--sm" data-modal-open="doc-modal"><i data-lucide="download"></i><span data-i18n="docs.download">Baixar</span></button>
+</div>
+<div class="docrow">
+<i data-lucide="file-text"></i>
+<div>
+<div class="docrow__name" data-i18n="docs.d11">Caderno de atividades — nível básico</div>
+<div class="docrow__meta">PDF · 3,1 MB</div>
+</div>
+<div class="docrow__spacer"></div>
+<button type="button" class="btn btn--ghost btn--sm" data-modal-open="doc-modal"><i data-lucide="download"></i><span data-i18n="docs.download">Baixar</span></button>
+</div>
+</div>
+<div class="docgroup">
+<div class="docgroup__head">
+<span class="itile"><i data-lucide="file-check"></i></span>
+<h3 data-i18n="docs.g4">Declarações institucionais</h3>
+</div>
+<div class="docrow">
+<i data-lucide="file-text"></i>
+<div>
+<div class="docrow__name" data-i18n="docs.d12">Declaração de capacidade técnica</div>
+<div class="docrow__meta">PDF · 320 KB</div>
+</div>
+<div class="docrow__spacer"></div>
+<button type="button" class="btn btn--ghost btn--sm" data-modal-open="doc-modal"><i data-lucide="download"></i><span data-i18n="docs.download">Baixar</span></button>
+</div>
+<div class="docrow">
+<i data-lucide="file-text"></i>
+<div>
+<div class="docrow__name" data-i18n="docs.d13">Declaração de atendimento às normas</div>
+<div class="docrow__meta">PDF · 280 KB</div>
+</div>
+<div class="docrow__spacer"></div>
+<button type="button" class="btn btn--ghost btn--sm" data-modal-open="doc-modal"><i data-lucide="download"></i><span data-i18n="docs.download">Baixar</span></button>
+</div>
+<div class="docrow">
+<i data-lucide="file-text"></i>
+<div>
+<div class="docrow__name" data-i18n="docs.d14">Termo de garantia padrão</div>
+<div class="docrow__meta">PDF · 150 KB</div>
+</div>
+<div class="docrow__spacer"></div>
+<button type="button" class="btn btn--ghost btn--sm" data-modal-open="doc-modal"><i data-lucide="download"></i><span data-i18n="docs.download">Baixar</span></button>
+</div>
+</div>
+<div class="docgroup">
+<div class="docgroup__head">
+<span class="itile"><i data-lucide="award"></i></span>
+<h3 data-i18n="docs.g5">Certificações e conformidades</h3>
+</div>
+<div class="docrow">
+<i data-lucide="file-text"></i>
+<div>
+<div class="docrow__name" data-i18n="docs.d15">Certificado de conformidade INMETRO*</div>
+<div class="docrow__meta">PDF · 450 KB</div>
+</div>
+<div class="docrow__spacer"></div>
+<button type="button" class="btn btn--ghost btn--sm" data-modal-open="doc-modal"><i data-lucide="download"></i><span data-i18n="docs.download">Baixar</span></button>
+</div>
+<div class="docrow">
+<i data-lucide="file-text"></i>
+<div>
+<div class="docrow__name" data-i18n="docs.d16">Laudos técnicos*</div>
+<div class="docrow__meta">PDF · 680 KB</div>
+</div>
+<div class="docrow__spacer"></div>
+<button type="button" class="btn btn--ghost btn--sm" data-modal-open="doc-modal"><i data-lucide="download"></i><span data-i18n="docs.download">Baixar</span></button>
+</div>
+<div class="docrow">
+<i data-lucide="file-text"></i>
+<div>
+<div class="docrow__name" data-i18n="docs.d17">Declaração de responsabilidade técnica</div>
+<div class="docrow__meta">PDF · 220 KB</div>
+</div>
+<div class="docrow__spacer"></div>
+<button type="button" class="btn btn--ghost btn--sm" data-modal-open="doc-modal"><i data-lucide="download"></i><span data-i18n="docs.download">Baixar</span></button>
+</div>
+</div>
+</div>
+
+<div class="card" style="margin-top:var(--space-7)">
+<h3 style="font-size:1.0625rem" data-i18n="docs.info.title">Informações importantes</h3>
+<ul class="blist blist--ui" style="margin:0">
+<li data-i18n="docs.info.i1">Todos os documentos estão disponíveis em formato PDF para facilitar a impressão e citação.</li>
+<li data-i18n="docs.info.i2">Para documentos específicos não listados, entre em contato com nossa equipe institucional.</li>
+<li data-i18n="docs.info.i3">Documentos para processos licitatórios podem ser solicitados com carimbo e assinatura física.</li>
+<li data-i18n="docs.info.i4">Atualizações de catálogos e fichas técnicas são realizadas periodicamente.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<div id="doc-modal" data-modal hidden style="position:fixed;inset:0;z-index:80;display:flex;align-items:center;justify-content:center;padding:var(--space-5)">
+<div data-modal-close style="position:absolute;inset:0;background:rgba(35,31,32,.55)"></div>
+<div class="card" role="dialog" aria-modal="true" aria-labelledby="doc-modal-title" style="position:relative;width:460px;max-width:100%;box-shadow:var(--shadow-lg)">
+<span class="itile"><i data-lucide="lock"></i></span>
+<h3 id="doc-modal-title" style="font-size:1.125rem" data-i18n="docs.restricted.title">Área restrita para clientes</h3>
+<p class="small muted" data-i18n="docs.restricted.body">O download desta documentação exige acesso de cliente. Se você já é cliente, entre com seu login. Caso contrário, solicite acesso pelo contato institucional.</p>
+<div class="btn-row">
+<a class="btn btn--primary" href="login.html" data-i18n="docs.restricted.login">Entrar</a>
+<a class="btn btn--secondary" href="solicitar-acesso.html" data-i18n="docs.restricted.request">Solicitar acesso</a>
+<button type="button" class="btn btn--ghost" data-modal-close>×</button>
+</div>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+<div class="pixelbar pixelbar--6"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="container">
+<div class="site-footer__grid">
+<div>
+<a class="brand site-footer__brand" href="index.html"><img src="assets/img/olya-logo.svg" alt="oLyA" data-i18n-alt="brand.alt"></a>
+<p class="small" style="color:rgba(255,255,255,.72);max-width:30ch;margin:var(--space-4) 0 0" data-i18n="footer.blurb">Soluções em robótica educacional para formação tecnológica e inovação no ensino brasileiro.</p>
+<div class="site-footer__contact">
+<div><i data-lucide="mail"></i><a href="mailto:contato@olya.cc">contato@olya.cc</a></div>
+<div><i data-lucide="map-pin"></i><span data-i18n="footer.location">Florianópolis, SC — Brasil</span></div>
+</div>
+<div class="social">
+<a href="https://instagram.com/olya" aria-label="Instagram"><img src="assets/img/social/instagram.svg" alt="Instagram"></a>
+<a href="https://youtube.com/@olya" aria-label="YouTube"><img src="assets/img/social/youtube.svg" alt="YouTube"></a>
+<a href="https://facebook.com/olya" aria-label="Facebook"><img src="assets/img/social/facebook.svg" alt="Facebook"></a>
+</div>
+</div>
+<div>
+<h3 data-i18n="footer.institutional">Institucional</h3>
+<div class="site-footer__links">
+<a href="quem-somos.html" data-i18n="footer.about">Quem Somos</a>
+<a href="quem-somos.html#missao" data-i18n="footer.mission">Missão e Valores</a>
+<a href="contato.html" data-i18n="footer.contact">Contato</a>
+</div>
+</div>
+<div>
+<h3 data-i18n="footer.products">Produtos</h3>
+<div class="site-footer__links">
+<a href="produtos.html#braco-robotico" data-i18n="footer.arm">Braço Robótico</a>
+<a href="produtos.html#kits" data-i18n="footer.kits">Kits de Robótica</a>
+<a href="aplicacoes.html" data-i18n="footer.applications">Aplicações</a>
+</div>
+</div>
+<div>
+<h3 data-i18n="footer.support">Suporte</h3>
+<div class="site-footer__links">
+<a href="documentacao.html" data-i18n="footer.docs">Documentação</a>
+<a href="suporte.html" data-i18n="footer.techsupport">Suporte Técnico</a>
+<a href="suporte.html#materiais" data-i18n="footer.materials">Materiais de Apoio</a>
+<a href="area-cliente.html" data-i18n="footer.clientarea">Área do Cliente</a>
+</div>
+</div>
+</div>
+<div class="site-footer__bottom">
+<span data-i18n="footer.rights">© 2026 OLYA TECNOLOGIA LTDA. Todos os direitos reservados.</span>
+<span data-i18n="footer.cnpj">CNPJ 62.578.525/0001-66</span>
+</div>
+</div>
+</footer>
+<script src="https://unpkg.com/lucide@0.544.0/dist/umd/lucide.min.js"></script>
+<script src="assets/i18n.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

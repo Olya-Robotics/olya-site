@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title data-i18n="req.title">Solicitar acesso — oLyA</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="auth">
+<aside class="auth__aside">
+<div class="pixelbar pixelbar--6"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div>
+<a class="brand" href="index.html" style="margin-bottom:var(--space-8)"><img src="assets/img/olya-logo.svg" alt="oLyA" data-i18n-alt="brand.alt"></a>
+<h2 data-i18n="auth.aside.h2">Área do cliente oLyA</h2>
+<p class="lead" style="color:rgba(255,255,255,.72)" data-i18n="auth.aside.p">Acesse fichas técnicas, manuais, planos de aula e o histórico dos seus pedidos institucionais.</p>
+<ul class="blist blist--ui" style="margin-top:var(--space-6)">
+<li style="color:rgba(255,255,255,.85)" data-i18n="auth.aside.i1">Documentação técnica completa</li>
+<li style="color:rgba(255,255,255,.85)" data-i18n="auth.aside.i2">Materiais pedagógicos por ano escolar</li>
+<li style="color:rgba(255,255,255,.85)" data-i18n="auth.aside.i3">Acompanhamento de pedidos e garantias</li>
+</ul>
+</div>
+<p class="small" style="color:rgba(255,255,255,.55);margin:0" data-i18n="tagline">Apreender o presente, potencializar o futuro.</p>
+<img class="auth__aside-col" src="assets/img/robot-column.png" alt="">
+</aside>
+<main class="auth__main">
+<div class="auth__card">
+<div class="auth__top">
+<a class="brand" href="index.html"><img src="assets/img/olya-logo.svg" alt="oLyA" data-i18n-alt="brand.alt"></a>
+<div class="header-tools" style="margin:0">
+<div class="langswitch" role="group" aria-label="Idioma / Language">
+<button type="button" data-lang="pt" aria-pressed="true">PT</button>
+<button type="button" data-lang="en" aria-pressed="false">EN</button>
+</div>
+<button type="button" class="iconbtn" data-theme-toggle aria-pressed="false" data-i18n-aria="nav.theme" aria-label="Alternar tema"><i data-lucide="moon"></i></button>
+</div>
+</div>
+<h1 style="font-size:2rem" data-i18n="req.h1">Solicitar acesso institucional</h1>
+<p class="muted" data-i18n="req.lead">A área do cliente é liberada para instituições que já adquiriram soluções OLYA. Preencha os dados e nossa equipe institucional confirma o cadastro.</p>
+<form data-demo style="margin-top:var(--space-6)">
+<div class="field">
+<label for="q-inst"><span data-i18n="req.institution">Instituição</span><span class="req">*</span></label>
+<input class="input" id="q-inst" required placeholder="Escola, secretaria ou instituto" data-i18n-placeholder="ct.form.institution.ph">
+</div>
+<div class="field">
+<label for="q-cnpj" data-i18n="req.cnpj">CNPJ da instituição</label>
+<input class="input" id="q-cnpj" placeholder="00.000.000/0000-00">
+</div>
+<div class="field">
+<label for="q-name"><span data-i18n="req.name">Responsável</span><span class="req">*</span></label>
+<input class="input" id="q-name" required placeholder="Nome completo" data-i18n-placeholder="ct.form.name.ph">
+</div>
+<div class="field">
+<label for="q-role" data-i18n="req.role">Cargo</label>
+<input class="input" id="q-role" placeholder="Coordenação pedagógica">
+</div>
+<div class="field">
+<label for="q-mail"><span data-i18n="req.email">E-mail institucional</span><span class="req">*</span></label>
+<span class="input-wrap">
+<i data-lucide="mail"></i>
+<input class="input" id="q-mail" type="email" required placeholder="nome@escola.edu.br">
+</span>
+</div>
+<button class="btn btn--primary btn--lg btn--block" type="submit"><span data-i18n="req.submit">Enviar solicitação</span><i data-lucide="send"></i></button>
+<div class="form-msg" data-demo-msg="req.sent" hidden><i data-lucide="check-circle"></i><span>Solicitação enviada. Nossa equipe institucional responde em até 2 dias úteis.</span></div>
+</form>
+<p class="auth__foot"><span data-i18n="req.haslogin">Já tem acesso?</span> <a href="login.html" data-i18n="nav.login">Entrar</a></p>
+<p class="auth__legal">
+<a href="index.html" data-i18n="auth.back">Voltar ao site</a> · <span data-i18n="auth.demo">Telas de demonstração — a autenticação ainda não está conectada.</span>
+</p>
+</div>
+</main>
+</div>
+<script src="https://unpkg.com/lucide@0.544.0/dist/umd/lucide.min.js"></script>
+<script src="assets/i18n.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
