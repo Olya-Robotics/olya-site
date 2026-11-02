@@ -27,7 +27,6 @@ window.OLYA_I18N = {
     "footer.techsupport": "Suporte Técnico",
     "footer.materials": "Materiais de Apoio",
     "footer.rights": "© 2026 OLYA TECNOLOGIA LTDA. Todos os direitos reservados.",
-    "footer.cnpj": "CNPJ 62.578.525/0001-66",
     "footer.location": "Florianópolis, SC — Brasil",
 
     /* ---- home ---- */
@@ -560,7 +559,6 @@ window.OLYA_I18N = {
     "footer.techsupport": "Technical Support",
     "footer.materials": "Teaching Resources",
     "footer.rights": "© 2026 OLYA TECNOLOGIA LTDA. All rights reserved.",
-    "footer.cnpj": "Tax ID (CNPJ) 62.578.525/0001-66",
     "footer.location": "Florianópolis, SC — Brazil",
 
     "about.title": "About Us — oLyA",
