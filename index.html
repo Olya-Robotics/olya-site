@@ -3,8 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title data-i18n="home.title">oLyA — Soluções em Robótica Educacional</title>
-<meta name="description" content="A OLYA desenvolve e fornece equipamentos e kits de robótica educacional para instituições de ensino. Braços robóticos, kits STEAM e soluções completas para laboratórios de robótica.">
+<title data-i18n="home.title">oLyA — Robótica aplicada para pequenas empresas</title>
+<meta name="description" content="A oLyA fornece robótica aplicada para pequenas empresas e laboratórios: quadrúpede Unitree Go2 Pro para inspeção e manutenção industrial leve, em venda ou locação por período.">
+<link rel="canonical" href="https://www.olya.cc/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="oLyA">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="oLyA — Robótica aplicada para pequenas empresas">
+<meta property="og:description" content="A oLyA fornece robótica aplicada para pequenas empresas e laboratórios: quadrúpede Unitree Go2 Pro para inspeção e manutenção industrial leve, em venda ou locação por período.">
+<meta property="og:url" content="https://www.olya.cc/">
+<meta property="og:image" content="https://www.olya.cc/assets/img/go2-pro.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#26a9e0">
+<link rel="manifest" href="site.webmanifest">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
@@ -14,9 +25,9 @@
 <body>
 <header class="site-header">
 <div class="container site-header__inner">
-<a class="brand" href="index.html"><img src="assets/img/olya-logo.svg" alt="oLyA" data-i18n-alt="brand.alt"></a>
+<a class="brand" href="index.html"><img src="assets/img/olya-logo.svg" alt="oLyA Tecnologia" data-i18n-alt="brand.alt"></a>
 <nav class="nav">
-<a href="index.html" aria-current="page" data-i18n="nav.home">Início</a>
+<a href="index.html" data-i18n="nav.home">Início</a>
 <a href="quem-somos.html" data-i18n="nav.about">Quem Somos</a>
 <a href="produtos.html" data-i18n="nav.products">Produtos</a>
 <a href="aplicacoes.html" data-i18n="nav.applications">Aplicações</a>
@@ -30,7 +41,7 @@
 <button type="button" data-lang="en" aria-pressed="false">EN</button>
 </div>
 <button type="button" class="iconbtn" data-theme-toggle aria-pressed="false" data-i18n-aria="nav.theme" aria-label="Alternar tema claro e escuro"><i data-lucide="moon"></i></button>
-<a class="btn btn--primary btn--sm" href="login.html" data-i18n="nav.login">Entrar</a>
+<a class="btn btn--primary btn--sm" href="contato.html" data-i18n="nav.cta">Solicitar proposta</a>
 <button type="button" class="iconbtn menubtn" data-menu-toggle aria-expanded="false" aria-controls="mobile-nav" data-i18n-aria="nav.menu" aria-label="Menu"><i data-lucide="menu"></i></button>
 </div>
 </div>
@@ -43,159 +54,157 @@
 <a href="documentacao.html" data-i18n="nav.docs">Documentação</a>
 <a href="suporte.html" data-i18n="nav.support">Suporte</a>
 <a href="contato.html" data-i18n="nav.contact">Contato</a>
-<a href="login.html" data-i18n="nav.login">Entrar</a>
+<a href="contato.html" data-i18n="nav.cta">Solicitar proposta</a>
 </div>
 </header>
 <main>
-<section class="hero">
+<section class="hx">
 <div class="container">
-<div class="hero__grid">
-<div>
+<div class="hx__head">
 <p class="hero__tagline" data-i18n="tagline">Apreender o presente, potencializar o futuro.</p>
-<h1 data-i18n="home.h1">Aprender é montar e desmontar o mundo.</h1>
-<p class="lead" style="max-width:52ch" data-i18n="home.lead">A OLYA desenvolve e fornece equipamentos e kits de robótica educacional para instituições de ensino, contribuindo para a formação de competências tecnológicas e o desenvolvimento de metodologias ativas de aprendizagem.</p>
-<div class="btn-row" style="margin-top:var(--space-6)">
-<a class="btn btn--primary btn--lg" href="produtos.html"><span data-i18n="home.cta1">Conheça nossos produtos</span><i data-lucide="arrow-right"></i></a>
-<a class="btn btn--secondary btn--lg" href="documentacao.html" data-i18n="home.cta2">Documentação institucional</a>
+<h1 class="display" data-i18n="hx.h1">Robôs de última geração para trabalhar e para ensinar.</h1>
+<p class="lead" data-i18n="hx.lead">A oLyA traz ao Brasil robótica moderna em duas linhas: a Profissional, para inspeção, manutenção e pesquisa, e a Educacional, para escolas, cursos técnicos e universidades.</p>
+<div class="btn-row hx__cta">
+<a class="btn btn--ink btn--lg" href="#linhas"><span data-i18n="hx.cta1">Conhecer as linhas</span><i data-lucide="arrow-down"></i></a>
+<a class="btn btn--secondary btn--lg" href="contato.html" data-i18n="hx.cta2">Solicitar proposta</a>
 </div>
-<div class="chip" style="margin-top:var(--space-6)"><i data-lucide="award"></i><span data-i18n="home.badge">Soluções para educação pública e privada</span></div>
 </div>
+<div class="stage">
+<a class="stage__tile" href="produtos.html#go2-pro">
+<img class="mul" src="assets/img/go2-pro.png" alt="Unitree Go2 Pro, quadrúpede de quatro patas em vista três quartos" data-i18n-alt="home.figcaption">
+<span class="stage__label"><b data-i18n="hx.l1">Linha Profissional</b><span>Unitree Go2 Pro</span></span>
+</a>
+<a class="stage__tile" href="brasso.html">
+<img src="assets/img/brasso/referencia.jpg" alt="Estrutura do braço BRASSO em alumínio laranja e preto" data-i18n-alt="br.alt.ref">
+<span class="stage__label"><b data-i18n="hx.l2">Linha Educacional</b><span>BRASSO</span></span>
+</a>
+</div>
+</div>
+</section>
+
+<section class="section" id="linhas" style="scroll-margin-top:80px">
+<div class="container">
+<div class="split-head">
 <div>
-<figure class="hero__figure" style="margin:0">
-<img src="assets/img/robotica-educacional.png" alt="" data-i18n-alt="home.figcaption">
-</figure>
+<p class="eyebrow eyebrow--accent" data-i18n="hx.lines.eyebrow">Duas linhas</p>
+<h2 data-i18n="hx.lines.h2">Uma para o trabalho. Outra para o aprendizado.</h2>
+</div>
+<p class="lead" data-i18n="hx.lines.lead">Os mesmos princípios nas duas: hardware atual, software próprio em português, treinamento de quem vai operar e suporte depois da entrega.</p>
+</div>
+<div class="lines">
+<article class="line line--ink">
+<div class="line__media"><img src="assets/img/go2-degraus.png" loading="lazy" alt="Go2 Pro subindo uma escada de concreto em área externa" data-i18n-alt="home.w1.alt"></div>
+<div class="line__body">
+<p class="line__num">01</p>
+<p class="eyebrow" data-i18n="hx.l1">Linha Profissional</p>
+<h3 data-i18n="hx.p.h3">Inspeção, manutenção e P&amp;D.</h3>
+<p data-i18n="hx.p.p">Robôs que entram na rotina de pequenas empresas e laboratórios: fazem a ronda, registram, mapeiam e servem de plataforma para desenvolver.</p>
+<ul class="line__list">
+<li><a href="produtos.html#go2-pro"><span>Unitree Go2 Pro</span><small data-i18n="hx.p.i1">Quadrúpede com LiDAR 4D</small><i data-lucide="arrow-up-right"></i></a></li>
+<li><a href="produtos.html#pesquisa"><span data-i18n="hx.p.i2t">Plataformas de P&amp;D</span><small data-i18n="hx.p.i2">SDK aberto e ROS 2</small><i data-lucide="arrow-up-right"></i></a></li>
+</ul>
+</div>
+</article>
+<article class="line">
+<div class="line__media line__media--grey"><img src="assets/img/brasso/bancada.jpg" loading="lazy" alt="Braço robótico BRASSO laranja e preto sobre bancada, com garra na ponta" data-i18n-alt="br.alt.bancada"></div>
+<div class="line__body">
+<p class="line__num">02</p>
+<p class="eyebrow eyebrow--accent" data-i18n="hx.l2">Linha Educacional</p>
+<h3 data-i18n="hx.e.h3">Da sala de aula ao laboratório.</h3>
+<p class="muted" data-i18n="hx.e.p">Robótica que o aluno monta, programa e vê funcionar — do ensino fundamental à engenharia, com material para o professor.</p>
+<ul class="line__list">
+<li><a href="brasso.html"><span>BRASSO</span><small data-i18n="hx.e.i1">Braço robótico de bancada</small><i data-lucide="arrow-up-right"></i></a></li>
+<li><a href="produtos.html#educacional"><span>LEGO Education SPIKE</span><small data-i18n="hx.e.i2">Essential e Prime</small><i data-lucide="arrow-up-right"></i></a></li>
+<li><a href="produtos.html#educacional"><span data-i18n="hx.e.i3t">Sala de Robótica oLyA</span><small data-i18n="hx.e.i3">Laboratório completo</small><i data-lucide="arrow-up-right"></i></a></li>
+</ul>
+</div>
+</article>
 </div>
 </div>
-</div>
-<img class="hero__col" src="assets/img/robot-column.png" alt="">
 </section>
 
 <section class="section section--ink">
 <div class="container">
-<div class="grid g3">
-<div><div class="stat__value">STEAM</div><div class="stat__label" data-i18n="home.stat1.l">Metodologia</div></div>
-<div><div class="stat__value">100<small>%</small></div><div class="stat__label" data-i18n="home.stat2.l">Suporte nacional</div></div>
-<div><div class="stat__value">Brasil</div><div class="stat__label" data-i18n="home.stat3.l">Atuação nacional</div></div>
+<div class="feat">
+<div class="feat__media"><img src="assets/img/go2-frente.jpg" loading="lazy" alt="Vista frontal do Go2 Pro, com a câmera e o LiDAR 4D no topo do corpo" data-i18n-alt="home.w2.alt"></div>
+<div>
+<p class="eyebrow" data-i18n="hx.l1">Linha Profissional</p>
+<h2>Unitree Go2 Pro</h2>
+<p class="lead" data-i18n="hx.g.p">Quadrúpede de última geração: caminha em piso irregular, sobe escada, enxerga em 360° e responde por voz. Venda ou locação por período.</p>
+<div class="kpis">
+<div class="kpi"><div class="kpi__v">15<small> kg</small></div><div class="kpi__l" data-i18n="hx.g.k1">Peso</div></div>
+<div class="kpi"><div class="kpi__v">3,5<small> m/s</small></div><div class="kpi__l" data-i18n="hx.g.k2">Velocidade</div></div>
+<div class="kpi"><div class="kpi__v">8<small> kg</small></div><div class="kpi__l" data-i18n="hx.g.k3">Carga útil</div></div>
+<div class="kpi"><div class="kpi__v">360°</div><div class="kpi__l" data-i18n="hx.g.k4">LiDAR 4D</div></div>
 </div>
+<a class="btn btn--onink btn--lg" href="produtos.html#go2-pro"><span data-i18n="home.prod.more">Ver página completa</span><i data-lucide="arrow-right"></i></a>
 </div>
-</section>
-
-<section class="section section--muted">
-<div class="container">
-<div class="center mx-auto measure" style="margin-bottom:var(--space-7)">
-<p class="eyebrow eyebrow--accent" data-i18n="home.portfolio.eyebrow">Portfólio</p>
-<h2 data-i18n="home.portfolio.h2">Portfólio de soluções</h2>
-<p class="lead" data-i18n="home.portfolio.lead">Equipamentos e materiais desenvolvidos para atender às necessidades de instituições de ensino em todo o Brasil.</p>
-</div>
-<div class="grid g3">
-<article class="card card--pad0 card--hover" data-cat="arm">
-<div class="card__media"><img src="assets/img/braco-robotico.jpg" alt="" loading="lazy"></div>
-<div class="card__body">
-<h3 data-i18n="home.p1.title">Braço robótico educacional</h3>
-<p class="small muted" data-i18n="home.p1.desc">Equipamento projetado para ambientes educacionais, permitindo o aprendizado prático de conceitos de automação, programação e mecatrônica.</p>
-<ul class="blist blist--ui" style="margin-bottom:var(--space-5)">
-<li data-i18n="home.p1.f1">Programação intuitiva</li>
-<li data-i18n="home.p1.f2">Múltiplos eixos de movimento</li>
-<li data-i18n="home.p1.f3">Material didático incluso</li>
-</ul>
-<a class="btn btn--ghost btn--sm" style="padding-left:0" href="produtos.html#braco-robotico"><span data-i18n="home.learnmore">Saiba mais</span><i data-lucide="arrow-right"></i></a>
-</div>
-</article>
-<article class="card card--pad0 card--hover" data-cat="kits">
-<div class="card__media"><img src="assets/img/kit.jpg" alt="" loading="lazy"></div>
-<div class="card__body">
-<h3 data-i18n="home.p2.title">Kits de robótica educacional</h3>
-<p class="small muted" data-i18n="home.p2.desc">Conjuntos completos para implementação de laboratórios de robótica, com componentes eletrônicos, estruturais e material pedagógico.</p>
-<ul class="blist blist--ui" style="margin-bottom:var(--space-5)">
-<li data-i18n="home.p2.f1">Níveis iniciante a avançado</li>
-<li data-i18n="home.p2.f2">Compatível com STEAM</li>
-<li data-i18n="home.p2.f3">Guias para professores</li>
-</ul>
-<a class="btn btn--ghost btn--sm" style="padding-left:0" href="produtos.html#kits"><span data-i18n="home.learnmore">Saiba mais</span><i data-lucide="arrow-right"></i></a>
-</div>
-</article>
-<article class="card card--pad0 card--hover" data-cat="int">
-<div class="card__media"><img src="assets/img/braco-monitor.png" alt="" loading="lazy"></div>
-<div class="card__body">
-<h3 data-i18n="home.p3.title">Robótica educacional integrada</h3>
-<p class="small muted" data-i18n="home.p3.desc">Soluções que combinam hardware, software e metodologia para a implementação efetiva de robótica no currículo escolar.</p>
-<ul class="blist blist--ui" style="margin-bottom:var(--space-5)">
-<li data-i18n="home.p3.f1">Alinhado à BNCC</li>
-<li data-i18n="home.p3.f2">Formação de educadores</li>
-<li data-i18n="home.p3.f3">Suporte pedagógico</li>
-</ul>
-<a class="btn btn--ghost btn--sm" style="padding-left:0" href="aplicacoes.html"><span data-i18n="home.learnmore">Saiba mais</span><i data-lucide="arrow-right"></i></a>
-</div>
-</article>
 </div>
 </div>
 </section>
 
 <section class="section">
 <div class="container">
-<div class="center mx-auto measure" style="margin-bottom:var(--space-7)">
-<h2 data-i18n="home.commit.h2">Compromisso com educação e tecnologia</h2>
-<p class="lead" data-i18n="home.commit.lead">A OLYA atua com responsabilidade e dedicação para contribuir com a transformação educacional no Brasil.</p>
+<div class="feat feat--rev">
+<div class="feat__media feat__media--grey"><img src="assets/img/brasso/studio-01-workspace-escuro.jpg" loading="lazy" alt="Tela do BRASSO Studio com imagem do robô, leitura das juntas e painel de controle manual" data-i18n-alt="br.alt.s1"></div>
+<div>
+<p class="eyebrow eyebrow--accent" data-i18n="hx.l2">Linha Educacional</p>
+<h2>BRASSO</h2>
+<p class="lead" data-i18n="hx.b.p">Braço robótico de bancada com software para computador e app para celular. Programação em blocos ou Python, garra, ventosa e caneta na ponta.</p>
+<div class="kpis kpis--light">
+<div class="kpi"><div class="kpi__v">4<small></small></div><div class="kpi__l" data-i18n="hx.b.k1">Graus de liberdade</div></div>
+<div class="kpi"><div class="kpi__v">350<small> mm</small></div><div class="kpi__l" data-i18n="hx.b.k2">Alcance</div></div>
+<div class="kpi"><div class="kpi__v">±0,2<small> mm</small></div><div class="kpi__l" data-i18n="hx.b.k3">Repetibilidade</div></div>
+<div class="kpi"><div class="kpi__v">2,5<small> kg</small></div><div class="kpi__l" data-i18n="hx.b.k4">Peso</div></div>
 </div>
-<div class="grid g4">
-<div class="center">
-<span class="itile itile--round mx-auto" style="display:flex"><i data-lucide="book-open"></i></span>
-<h3 style="font-size:1.0625rem" data-i18n="home.c1.title">Educação de qualidade</h3>
-<p class="small muted" data-i18n="home.c1.desc">Comprometidos com o desenvolvimento de competências tecnológicas essenciais para o século XXI.</p>
-</div>
-<div class="center">
-<span class="itile itile--round mx-auto" style="display:flex"><i data-lucide="lightbulb"></i></span>
-<h3 style="font-size:1.0625rem" data-i18n="home.c2.title">Inovação pedagógica</h3>
-<p class="small muted" data-i18n="home.c2.desc">Soluções alinhadas às metodologias ativas e ao ensino por competências, integrando teoria e prática.</p>
-</div>
-<div class="center">
-<span class="itile itile--round mx-auto" style="display:flex"><i data-lucide="users"></i></span>
-<h3 style="font-size:1.0625rem" data-i18n="home.c3.title">Formação de educadores</h3>
-<p class="small muted" data-i18n="home.c3.desc">Capacitação e suporte contínuo para professores, garantindo a implementação efetiva dos recursos.</p>
-</div>
-<div class="center">
-<span class="itile itile--round mx-auto" style="display:flex"><i data-lucide="wrench"></i></span>
-<h3 style="font-size:1.0625rem" data-i18n="home.c4.title">Suporte técnico</h3>
-<p class="small muted" data-i18n="home.c4.desc">Assistência técnica especializada e materiais de apoio para manutenção e atualização dos equipamentos.</p>
+<a class="btn btn--ink btn--lg" href="brasso.html"><span data-i18n="home.prod.more">Ver página completa</span><i data-lucide="arrow-right"></i></a>
 </div>
 </div>
 </div>
 </section>
 
-<section class="section section--muted">
+<section class="section section--muted" id="comercial" style="scroll-margin-top:80px">
 <div class="container">
-<div class="grid g2-lg" style="gap:var(--space-8);align-items:center">
+<div class="measure" style="margin-bottom:var(--space-7)">
+<p class="eyebrow eyebrow--accent" data-i18n="home.buy.eyebrow">Modelo comercial</p>
+<h2 data-i18n="home.buy.h2">Compre ou alugue por período</h2>
+<p class="lead" data-i18n="home.buy.lead">Duas formas de colocar um robô para trabalhar sem travar o caixa da empresa.</p>
+</div>
+<div class="grid g2" style="gap:var(--space-5)">
+<div class="card">
+<span class="itile"><i data-lucide="package-check"></i></span>
+<h3 style="font-size:1.0625rem" data-i18n="home.buy1.title">Venda</h3>
+<p class="small muted" data-i18n="home.buy1.desc">O equipamento é seu, com nota fiscal, garantia de fabricante e treinamento de operação.</p>
+<ul class="blist blist--ui" style="margin:0">
+<li data-i18n="home.buy1.f1">Nota fiscal e garantia Unitree</li>
+<li data-i18n="home.buy1.f2">Treinamento de operação incluído</li>
+<li data-i18n="home.buy1.f3">Suporte técnico oLyA em português</li>
+</ul>
+</div>
+<div class="card">
+<span class="itile"><i data-lucide="calendar-clock"></i></span>
+<h3 style="font-size:1.0625rem" data-i18n="home.buy2.title">Locação por período</h3>
+<p class="small muted" data-i18n="home.buy2.desc">Para uma temporada de projeto, uma campanha de inspeção ou um semestre de pesquisa.</p>
+<ul class="blist blist--ui" style="margin:0">
+<li data-i18n="home.buy2.f1">Diária, semanal, mensal ou por projeto</li>
+<li data-i18n="home.buy2.f2">Entrega, configuração e retirada por nossa conta</li>
+<li data-i18n="home.buy2.f3">Operação assistida quando necessário</li>
+<li data-i18n="home.buy2.f4">Opção de compra ao final do contrato</li>
+</ul>
+</div>
+</div>
+<div class="note" style="margin-top:var(--space-6)"><i data-lucide="info"></i><span data-i18n="home.buy.note">Preços sob consulta. Enviamos proposta formal com escopo, prazo e condições — inclusive no padrão de edital, quando for o caso.</span></div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="card rowsplit">
 <div>
-<h2 data-i18n="home.comp.h2">Conformidade, qualidade e suporte</h2>
-<p class="lead" data-i18n="home.comp.p1">A OLYA mantém padrões rigorosos de qualidade e documentação, garantindo transparência e confiabilidade em processos de aquisição institucional e licitatória.</p>
-<p class="muted" data-i18n="home.comp.p2">Nossa estrutura está preparada para atender às demandas de órgãos públicos, com documentação técnica completa e suporte especializado para cada etapa do processo.</p>
-<div class="btn-row" style="margin-top:var(--space-6)">
-<a class="btn btn--primary" href="documentacao.html" data-i18n="home.comp.cta1">Acessar documentação</a>
-<a class="btn btn--secondary" href="contato.html" data-i18n="home.comp.cta2">Fale conosco</a>
+<h3 style="font-size:1.0625rem;margin-bottom:var(--space-1)" data-i18n="home.pub.title">Compra por órgão público ou licitação?</h3>
+<p class="small muted" style="margin:0" data-i18n="home.pub.desc">Fichas técnicas, catálogos e documentação institucional prontos, e proposta formal no padrão do seu edital.</p>
 </div>
-</div>
-<div class="grid g2" style="gap:var(--space-4)">
-<div class="card card--flat">
-<span class="itile itile--sm"><i data-lucide="shield"></i></span>
-<h4 style="margin-bottom:var(--space-1)" data-i18n="home.f1.title">Conformidade</h4>
-<p class="small muted" style="margin:0" data-i18n="home.f1.desc">Produtos e processos em conformidade com as exigências legais e normativas para aquisições públicas.</p>
-</div>
-<div class="card card--flat">
-<span class="itile itile--sm"><i data-lucide="file-check"></i></span>
-<h4 style="margin-bottom:var(--space-1)" data-i18n="home.f2.title">Documentação completa</h4>
-<p class="small muted" style="margin:0" data-i18n="home.f2.desc">Catálogos, fichas técnicas e documentos institucionais disponíveis para processos licitatórios.</p>
-</div>
-<div class="card card--flat">
-<span class="itile itile--sm"><i data-lucide="headphones"></i></span>
-<h4 style="margin-bottom:var(--space-1)" data-i18n="home.f3.title">Suporte dedicado</h4>
-<p class="small muted" style="margin:0" data-i18n="home.f3.desc">Equipe especializada para atendimento a órgãos públicos e instituições de ensino.</p>
-</div>
-<div class="card card--flat">
-<span class="itile itile--sm"><i data-lucide="refresh-cw"></i></span>
-<h4 style="margin-bottom:var(--space-1)" data-i18n="home.f4.title">Garantia e manutenção</h4>
-<p class="small muted" style="margin:0" data-i18n="home.f4.desc">Política de garantia clara e serviços de manutenção para continuidade das operações.</p>
-</div>
-</div>
+<a class="btn btn--primary btn--lg" href="documentacao.html" data-i18n="home.pub.cta">Acessar documentação</a>
 </div>
 </div>
 </section>
@@ -203,14 +212,16 @@
 <section class="section section--ink">
 <div class="container center">
 <div class="mx-auto measure">
-<h2 data-i18n="home.cta.h2">Documentação institucional disponível</h2>
-<p class="lead" data-i18n="home.cta.lead">Acesse catálogos, fichas técnicas e documentos institucionais para processos licitatórios e avaliações técnicas.</p>
+<p class="eyebrow eyebrow--center" data-i18n="home.cta.eyebrow">Demonstração e proposta</p>
+<h2 data-i18n="home.cta.h2">Vamos ver o robô andando?</h2>
+<p class="lead" data-i18n="home.cta.lead">Agende uma demonstração ou peça uma proposta de venda ou locação para o seu caso de uso.</p>
 <div class="btn-row" style="justify-content:center;margin-top:var(--space-6)">
-<a class="btn btn--onink btn--lg" href="documentacao.html"><span data-i18n="home.cta.b1">Acessar documentação</span><i data-lucide="arrow-right"></i></a>
-<a class="btn btn--onink-outline btn--lg" href="contato.html" data-i18n="home.cta.b2">Contato institucional</a>
+<a class="btn btn--onink btn--lg" href="contato.html"><span data-i18n="home.cta.b1">Solicitar proposta</span><i data-lucide="arrow-right"></i></a>
+<a class="btn btn--onink-outline btn--lg" href="documentacao.html" data-i18n="home.cta.b2">Documentação técnica</a>
 </div>
 </div>
 </div>
+<img class="ink-col" src="assets/img/robot-column.png" alt="">
 </section>
 </main>
 <footer class="site-footer">
@@ -218,16 +229,13 @@
 <div class="container">
 <div class="site-footer__grid">
 <div>
-<a class="brand site-footer__brand" href="index.html"><img src="assets/img/olya-logo.svg" alt="oLyA" data-i18n-alt="brand.alt"></a>
-<p class="small" style="color:rgba(255,255,255,.72);max-width:30ch;margin:var(--space-4) 0 0" data-i18n="footer.blurb">Soluções em robótica educacional para formação tecnológica e inovação no ensino brasileiro.</p>
+<a class="brand site-footer__brand" href="index.html"><img src="assets/img/olya-logo.svg" alt="oLyA Tecnologia" data-i18n-alt="brand.alt"></a>
+<p class="small" style="color:rgba(255,255,255,.72);max-width:30ch;margin:var(--space-4) 0 0" data-i18n="footer.blurb">Robótica aplicada para pequenas empresas e laboratórios: quadrúpede Unitree Go2 Pro, plataformas de P&amp;D e a linha educacional oLyA.</p>
 <div class="site-footer__contact">
 <div><i data-lucide="mail"></i><a href="mailto:contato@olya.cc">contato@olya.cc</a></div>
+<div><i data-lucide="map-pin"></i><span data-i18n="footer.location">Florianópolis, SC — Brasil</span></div>
 </div>
-<div class="social">
-<a href="https://instagram.com/olya" aria-label="Instagram"><img src="assets/img/social/instagram.svg" alt="Instagram"></a>
-<a href="https://youtube.com/@olya" aria-label="YouTube"><img src="assets/img/social/youtube.svg" alt="YouTube"></a>
-<a href="https://facebook.com/olya" aria-label="Facebook"><img src="assets/img/social/facebook.svg" alt="Facebook"></a>
-</div>
+<p class="site-footer__tagline" data-i18n="tagline">Apreender o presente, potencializar o futuro.</p>
 </div>
 <div>
 <h3 data-i18n="footer.institutional">Institucional</h3>
@@ -240,8 +248,10 @@
 <div>
 <h3 data-i18n="footer.products">Produtos</h3>
 <div class="site-footer__links">
-<a href="produtos.html#braco-robotico" data-i18n="footer.arm">Braço Robótico</a>
-<a href="produtos.html#kits" data-i18n="footer.kits">Kits de Robótica</a>
+<a href="produtos.html#linha-profissional" data-i18n="hx.l1">Linha Profissional</a>
+<a href="produtos.html#go2-pro" data-i18n="footer.go2">Unitree Go2 Pro</a>
+<a href="produtos.html#linha-educacional" data-i18n="hx.l2">Linha Educacional</a>
+<a href="brasso.html" data-i18n="footer.brasso">BRASSO — braço robótico</a>
 <a href="aplicacoes.html" data-i18n="footer.applications">Aplicações</a>
 </div>
 </div>
@@ -251,12 +261,12 @@
 <a href="documentacao.html" data-i18n="footer.docs">Documentação</a>
 <a href="suporte.html" data-i18n="footer.techsupport">Suporte Técnico</a>
 <a href="suporte.html#materiais" data-i18n="footer.materials">Materiais de Apoio</a>
-<a href="area-cliente.html" data-i18n="footer.clientarea">Área do Cliente</a>
 </div>
 </div>
 </div>
 <div class="site-footer__bottom">
-<span data-i18n="footer.rights">© 2026 OLYA. Todos os direitos reservados.</span>
+<span data-i18n="footer.rights">© 2026 OLYA TECNOLOGIA LTDA. Todos os direitos reservados.</span>
+<span data-i18n="footer.cnpj">CNPJ 62.578.525/0001-66</span>
 </div>
 </div>
 </footer>

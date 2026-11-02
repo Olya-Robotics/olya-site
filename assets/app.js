@@ -1,7 +1,7 @@
 /* OLYA — comportamento do site.
    Sem dependências além do Lucide (CDN, ícones de interface).
    Responsável por: tema claro/escuro, idioma PT/EN, menu mobile,
-   formulários de demonstração e medidor de força de senha. */
+   formulário de contato (mailto) e modal. */
 (function () {
   "use strict";
 
@@ -14,7 +14,7 @@
     document.documentElement.setAttribute("data-theme", theme);
     var btns = document.querySelectorAll("[data-theme-toggle]");
     for (var i = 0; i < btns.length; i++) {
-      var icon = btns[i].querySelector("i");
+      var icon = btns[i].querySelector("i, svg");
       if (icon) {
         icon.setAttribute("data-lucide", theme === "dark" ? "sun" : "moon");
       }
@@ -99,175 +99,43 @@
       var open = panel.hasAttribute("hidden");
       if (open) panel.removeAttribute("hidden"); else panel.setAttribute("hidden", "");
       btn.setAttribute("aria-expanded", open ? "true" : "false");
-      var icon = btn.querySelector("i");
+      var icon = btn.querySelector("i, svg");
       if (icon) icon.setAttribute("data-lucide", open ? "x" : "menu");
       if (window.lucide) window.lucide.createIcons();
     });
   }
 
-  /* ---------------- autenticação ---------------- */
-  function initAuthForm() {
-    var forms = document.querySelectorAll("[data-auth-form]");
-    for (var i = 0; i < forms.length; i++) {
-      forms[i].addEventListener("submit", async function (ev) {
-        ev.preventDefault();
-        var form = ev.currentTarget;
-        var email = form.querySelector('input[type="email"]');
-        var password = form.querySelector('input[type="password"]');
-        var msg = form.querySelector("[data-auth-error]");
-        var submit = form.querySelector('[type="submit"]');
-
-        if (msg) msg.hidden = true;
-        if (submit) submit.disabled = true;
-
-        var emailIsAuthorized = email && email.value.trim().toLowerCase() === "contato@olya.cc";
-        if (!emailIsAuthorized) {
-          if (msg) {
-            msg.textContent = t("login.invalid");
-            msg.hidden = false;
-          }
-          if (submit) submit.disabled = false;
-          return;
-        }
-
-        try {
-          var response = await fetch("/api/login", {
-            method: "POST",
-            credentials: "same-origin",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              email: email ? email.value : "",
-              password: password ? password.value : ""
-            })
-          });
-
-          var result = null;
-          try { result = await response.json(); } catch (parseError) {}
-          if (response.status === 401) {
-            if (msg) {
-              msg.textContent = t("login.invalid");
-              msg.hidden = false;
-            }
-            return;
-          }
-          if (!response.ok || !result || result.ok !== true) {
-            if (msg) {
-              msg.textContent = t("login.unavailable");
-              msg.hidden = false;
-            }
-            return;
-          }
-
-          window.location.href = form.getAttribute("data-auth-go") || "area-cliente.html";
-        } catch (error) {
-          if (msg) {
-            msg.textContent = t("login.unavailable");
-            msg.hidden = false;
-          }
-        } finally {
-          if (submit) submit.disabled = false;
-        }
-      });
-    }
-  }
-
-  function initProtectedArea() {
-    var content = document.querySelector("[data-auth-required]");
-    if (!content) return;
-
-    fetch("/api/session", { credentials: "same-origin", cache: "no-store" })
-      .then(function (response) {
-        if (!response.ok) {
-          window.location.replace("login.html?redirect=area-cliente.html");
-          return;
-        }
-        content.removeAttribute("hidden");
-      })
-      .catch(function () {
-        window.location.replace("login.html?redirect=area-cliente.html");
-      });
-  }
-
-  function initLogout() {
-    var links = document.querySelectorAll("[data-logout]");
-    for (var i = 0; i < links.length; i++) {
-      links[i].addEventListener("click", function (ev) {
-        ev.preventDefault();
-        var link = ev.currentTarget;
-        fetch("/api/logout", { method: "POST", credentials: "same-origin", cache: "no-store" })
-          .catch(function () {})
-          .then(function () {
-            window.location.href = link.getAttribute("href") || "login.html";
-          });
-      });
-    }
-  }
-  /* ---------------- formulários de demonstração ---------------- */
-  function initDemoForms() {
-    var forms = document.querySelectorAll("form[data-demo]");
+  /* ---------------- formulário de contato (mailto) ---------------- */
+  function initMailForms() {
+    var forms = document.querySelectorAll("form[data-mailto]");
     for (var i = 0; i < forms.length; i++) {
       forms[i].addEventListener("submit", function (ev) {
         ev.preventDefault();
         var form = ev.currentTarget;
-        var go = form.getAttribute("data-demo-go");
-        var msg = form.querySelector("[data-demo-msg]");
-
-        if (form.hasAttribute("data-demo-match")) {
-          var pws = form.querySelectorAll('input[type="password"]');
-          if (pws.length === 2 && pws[0].value !== pws[1].value) {
-            if (msg) {
-              msg.textContent = t("reset.mismatch");
-              msg.style.background = "rgba(214,66,27,.12)";
-              msg.style.color = "#d6421b";
-              msg.hidden = false;
-            }
-            return;
-          }
+        var msg = form.querySelector("[data-form-msg]");
+        if (!form.checkValidity()) {
+          if (msg) msg.hidden = false;
+          var bad = form.querySelector(":invalid");
+          if (bad) bad.focus();
+          return;
         }
-        if (go) { window.location.href = go; return; }
-        if (msg) {
-          msg.removeAttribute("style");
-          var key = msg.getAttribute("data-demo-msg");
-          if (key) msg.textContent = t(key);
-          msg.hidden = false;
-        }
-        var submit = form.querySelector('[type="submit"]');
-        if (submit) submit.disabled = true;
+        if (msg) msg.hidden = true;
+        var get = function (name) { var el = form.querySelector('[name="' + name + '"]'); return el ? el.value.trim() : ""; };
+        var subj = get("assunto") || t("ct.form.defaultsubject");
+        var lines = [
+          t("ct.form.institution") + ": " + get("empresa"),
+          t("ct.form.name") + ": " + get("responsavel"),
+          t("ct.form.email") + ": " + get("email"),
+          t("ct.form.state") + ": " + (get("estado") || "-"),
+          "",
+          get("mensagem")
+        ];
+        var href = "mailto:" + form.getAttribute("data-mailto") +
+          "?subject=" + encodeURIComponent("[olya.cc] " + subj + " — " + get("empresa")) +
+          "&body=" + encodeURIComponent(lines.join("\n"));
+        window.location.href = href;
       });
     }
-  }
-
-  /* ---------------- mostrar/ocultar senha ---------------- */
-  function initReveal() {
-    var btns = document.querySelectorAll("[data-reveal]");
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function (ev) {
-        var btn = ev.currentTarget;
-        var input = document.getElementById(btn.getAttribute("data-reveal"));
-        if (!input) return;
-        var show = input.type === "password";
-        input.type = show ? "text" : "password";
-        var icon = btn.querySelector("i");
-        if (icon) icon.setAttribute("data-lucide", show ? "eye-off" : "eye");
-        if (window.lucide) window.lucide.createIcons();
-      });
-    }
-  }
-
-  /* ---------------- força da senha ---------------- */
-  function initStrength() {
-    var input = document.querySelector("[data-strength]");
-    if (!input) return;
-    var bar = document.getElementById(input.getAttribute("data-strength"));
-    if (!bar) return;
-    input.addEventListener("input", function () {
-      var v = input.value, score = 0;
-      if (v.length >= 8) score++;
-      if (/[a-z]/.test(v) && /[A-Z]/.test(v)) score++;
-      if (/[0-9]/.test(v)) score++;
-      if (/[^A-Za-z0-9]/.test(v)) score++;
-      bar.setAttribute("data-level", v ? String(score) : "0");
-    });
   }
 
   /* ---------------- filtro por tag (catálogo) ---------------- */
@@ -316,7 +184,7 @@
   /* ---------------- marcar página atual ---------------- */
   function markCurrent() {
     var here = location.pathname.split("/").pop() || "index.html";
-    var links = document.querySelectorAll(".nav a, .mobile-nav a, .sidebar nav a");
+    var links = document.querySelectorAll(".nav a, .mobile-nav a");
     for (var i = 0; i < links.length; i++) {
       var href = links[i].getAttribute("href");
       if (href === here) links[i].setAttribute("aria-current", "page");
@@ -329,12 +197,7 @@
     applyLang(initialLang());
     markCurrent();
     initMenu();
-    initAuthForm();
-    initProtectedArea();
-    initLogout();
-    initDemoForms();
-    initReveal();
-    initStrength();
+    initMailForms();
     initFilter();
     initModal();
 
