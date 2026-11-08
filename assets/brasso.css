@@ -1,0 +1,23 @@
+/* BRASSO: scoped presentation and technical disclosure. */
+#conteudo-brasso section[id]{scroll-margin-top:96px}
+#conteudo-brasso .btn-row{margin-top:var(--space-6)}
+.br-config-grid,.br-software-grid,.br-support-grid{margin-top:var(--space-6)}
+.br-state{display:block;margin-bottom:var(--space-4);font:500 .75rem/1.5 var(--font-ui);letter-spacing:.06em;text-transform:uppercase;color:var(--accent-text)}
+.br-data{margin-top:var(--space-5)}
+.br-data .table{min-width:650px;table-layout:fixed}
+.br-data .table th:first-child{width:22%}
+.br-data .table th,.br-data .table td{white-space:normal;overflow-wrap:anywhere}
+.br-data .table tbody th{padding:13px 18px;font-size:.9rem;letter-spacing:normal;text-transform:none;background:transparent;color:var(--fg);vertical-align:top;border-bottom:1px solid var(--line);line-height:1.5}
+.br-data .table tbody tr:last-child th{border-bottom:0}
+.br-review-note{padding:var(--space-5);margin-top:var(--space-5);border-left:3px solid var(--accent);background:var(--accent-soft);font:400 .9375rem/1.6 var(--font-ui);color:var(--fg)}
+.br-review-note--ink{background:rgba(255,255,255,.08);color:#fff}
+.br-gallery{margin-top:var(--space-5)}
+.br-gallery figure{margin:0}
+.br-gallery .card__media{aspect-ratio:4/3}
+.br-gallery .card__media img{object-fit:contain}
+.br-figure .br-cap{margin:0;color:#3d3939;background:#e9eaec}
+.br-tech-details{margin-top:var(--space-6)}
+.br-tech-details details p{max-width:90ch}
+.br-software-grid p{color:rgba(255,255,255,.82)}
+.br-cta-row{justify-content:center}
+@media(max-width:639px){.br-data .table{min-width:580px}.br-phones{grid-template-columns:repeat(2,minmax(0,1fr))}.br-phones img:last-child{display:block;max-width:none}.br-state{font-size:.7rem}}
